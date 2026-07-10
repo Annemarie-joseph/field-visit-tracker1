@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes stampIn {
+  0% { transform: scale(0) rotate(-18deg); opacity: 0; }
+  60% { transform: scale(1.15) rotate(-12deg); opacity: 1; }
+  100% { transform: scale(1) rotate(-12deg); opacity: 1; }
+}
+
+.animate-stamp {
+  animation: stampIn 0.5s cubic-bezier(0.2, 1.4, 0.4, 1) forwards;
+}
