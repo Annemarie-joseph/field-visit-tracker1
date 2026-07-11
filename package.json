@@ -1,8 +1,7 @@
 {
-  "name": "field-visit-tracker",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "cd frontend && npm install && npm run build",
-    "start": "cd backend && node server.js"
+  "name": "the-rounds-api-functions",
+  "private": true,
+  "dependencies": {
+    "mongoose": "^8.5.1"
   }
 }

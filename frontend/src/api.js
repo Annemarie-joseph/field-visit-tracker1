@@ -1,5 +1,5 @@
-const BASE_URL = import.meta.env.VITE_API_URL ||
-  (import.meta.env.DEV ? `http://${window.location.hostname}:4000` : '');
+// Empty string = same-origin requests, since /api now deploys alongside this frontend on Vercel.
+const BASE_URL = import.meta.env.VITE_API_URL || '';
 
 function getToken() {
   return localStorage.getItem('token');
