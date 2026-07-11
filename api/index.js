@@ -10,10 +10,22 @@ const app = express();
 app.use(cors({ origin: '*' }));
 app.use(express.json());
 
+app.use((req, res, next) => {
+  console.log(`[Serverless Request] Method: ${req.method}, URL: ${req.url}, OriginalURL: ${req.originalUrl}`);
+  next();
+});
+
 app.use('/api/auth',      authRoutes);
+app.use('/auth',          authRoutes);
+
 app.use('/api/people',    peopleRoutes);
+app.use('/people',        peopleRoutes);
+
 app.use('/api/visits',    visitRoutes);
+app.use('/visits',        visitRoutes);
+
 app.use('/api/analytics', analyticsRoutes);
+app.use('/analytics',     analyticsRoutes);
 
 let dbConnected = false;
 
