@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: the-rounds-api
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: PORT
+        value: 4000
+      - key: CORS_ORIGIN
+        sync: false
